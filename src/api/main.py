@@ -16,6 +16,8 @@ app = FastAPI(
     title="Fuel Analytics Brasil"
 )
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
