@@ -20,7 +20,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://127.0.0.1:5500",
-        "http://localhost:5500"
+        "http://localhost:5500",
+        "https://fuel-analytics-brasil-tan.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -104,6 +105,6 @@ def comparar(cidade1: str, cidade2: str):
         "cidade1": cidade1.upper(),
 
         "cidade2": cidade2.upper(),
-        
+
         "comparacao": comparacao
     }

@@ -6,6 +6,8 @@ const botaoComparar = document.getElementById("comparar");
 
 botaoComparar.addEventListener("click", compararCidades);
 
+const API = "https://fuel-analytics-apiuvicorn-main-app-host.onrender.com";
+
 async function buscarCidade() {
 
     const cidade = document.getElementById("cidade").value;
@@ -19,9 +21,9 @@ async function buscarCidade() {
 
     try {
 
-        const resposta = await fetch(
-            `http://127.0.0.1:8000/combustivel?cidade=${cidade}`
-        );
+    const resposta = await fetch(
+    `${API}/combustivel?cidade=${cidade}`
+);
 
         const dados = await resposta.json();
 
@@ -303,9 +305,9 @@ async function compararCidades() {
 
     try {
 
-        const resposta = await fetch(
-            `http://127.0.0.1:8000/comparar?cidade1=${cidade1}&cidade2=${cidade2}`
-        );
+const resposta = await fetch(
+    `${API}/comparar?cidade1=${cidade1}&cidade2=${cidade2}`
+);
 
         const dados = await resposta.json();
 
