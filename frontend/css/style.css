@@ -37,6 +37,16 @@ h1{
 
 }
 
+h2{
+
+    color:#1f2937;
+
+    margin-top:20px;
+
+    margin-bottom:15px;
+
+}
+
 .subtitulo{
 
     text-align:center;
@@ -96,6 +106,70 @@ h1{
 }
 
 .pesquisa button:hover{
+
+    background:#1d4ed8;
+
+}
+
+.comparacao{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:30px;
+
+}
+
+.comparar-input{
+
+    flex:1;
+
+    min-width:220px;
+
+    padding:12px;
+
+    font-size:16px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+.comparar-input:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 8px rgba(37,99,235,.25);
+
+}
+
+.comparar-btn{
+
+    min-width:180px;
+
+    padding:12px 30px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.comparar-btn:hover{
 
     background:#1d4ed8;
 
@@ -496,6 +570,150 @@ footer{
 .logo:hover{
 
     transform:scale(1.05);
+
+}
+
+/* ===========================
+TABLET
+=========================== */
+
+@media (max-width:768px){
+
+body{
+    padding:20px;
+}
+
+.container{
+    padding:20px;
+}
+
+.pesquisa{
+    flex-direction:column;
+}
+
+.pesquisa input,
+.pesquisa button{
+    width:100%;
+}
+
+.dashboard{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.comparacao{
+
+    flex-direction:column;
+
+}
+
+.comparar-input,
+.comparar-btn{
+
+    width:100%;
+
+}
+
+.grafico-container{
+    height:280px;
+}
+
+}
+
+
+/* ===========================
+CELULAR
+=========================== */
+
+@media (max-width:480px){
+
+body{
+    padding:12px;
+}
+
+.container{
+    padding:18px;
+}
+
+h1{
+    font-size:28px;
+}
+
+.subtitulo{
+    font-size:15px;
+}
+
+.logo{
+    width:90px;
+}
+
+.dashboard{
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.kpi{
+    padding:18px;
+}
+
+.kpi span{
+    font-size:30px;
+}
+
+.kpi h2{
+    font-size:22px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.card-combustivel{
+    padding:18px;
+}
+
+.card-combustivel p{
+    font-size:24px;
+}
+
+.pesquisa{
+    flex-direction:column;
+}
+
+.pesquisa input,
+.pesquisa button{
+    width:100%;
+}
+
+.comparacao{
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.comparar-input,
+.comparar-btn{
+    width:100%;
+}
+
+.tabela-comparacao{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+.grafico-container{
+    height:240px;
+}
+
+footer{
+    font-size:12px;
+}
 
 }
 
